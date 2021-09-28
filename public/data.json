@@ -1,0 +1,19 @@
+{
+  "dates": [
+    {
+      "id": "Math.random(100)",
+      "title": "8.30 Подьем",
+      "completed": "false"
+    },
+    {
+      "id": "Math.random(100)",
+      "title": "9.00 Зарядка",
+      "completed": "false"
+    },
+    {
+      "id": "Math.random(100)",
+      "title": "9.20 Завтрак",
+      "completed": "false"
+    }
+  ]
+}

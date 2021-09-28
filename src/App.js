@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import TodoList from "./TodoList/TodoList";
+import Todo from "./Todo/Todo";
+import TodoAdd from "./TodoAdd/TodoAdd";
+import "./index.css";
+import { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Col } from "react-bootstrap";
 
 function App() {
+  const [todo, setTodo] = useState([]);
+
+  console.log(todo);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Todo todo={todo} />
+      <TodoAdd todo={todo} setTodo={setTodo} />
+      <Container>
+        <Col>
+          <TodoList todo={todo} setTodo={setTodo} />
+        </Col>
+      </Container>
     </div>
   );
 }
